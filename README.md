@@ -1,66 +1,29 @@
-## Foundry
+## How to install and run tests
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
+```
+forge build
 ```
 
-### Test
+## Deployment and verification steps
 
-```shell
-$ forge test
+```
+forge script script/deploy.s.sol --rpc-url sepolia --broadcast --private-key <> --verify --etherscan-api-key <>
 ```
 
-### Format
+## Generate signature
 
-```shell
-$ forge fmt
+```
+cd ./js_scripts
+node generate-pay-stub.js
 ```
 
-### Gas Snapshots
+## Verified contracts addresses
 
-```shell
-$ forge snapshot
-```
+Implementation: 0xFb865E4C265FBf60DB425e93F25bFA892F579049
+Factory: 0xD987298df59FE90f88b33f65204Dbe1CCf352617
 
-### Anvil
+## Proof of execution
 
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
+createPayroll tx: https://sepolia.etherscan.io/tx/0x1db3b84364d6e1fd9a049df9865e3f8bfde4902d37562ae23a98a78622b61b4f
+fund: https://sepolia.etherscan.io/tx/0x296b5f188e4822216d69387b62c41c0933dda4cdd2ea9f205c5fb88cd6222101
+claimSalary tx: https://sepolia.etherscan.io/tx/0xecc99ad554ed092d19c42f2b5ab6787024362ccedac5c6c31906efd4908afe0b

@@ -1,0 +1,8 @@
+{
+  "signature": "0xeabc3a0902e6e14d3790f9ad030517115f0a3ea26ae2aa78f3797441a3e1287d24c801fe05873c6ee4d814b22eaea7326f43ad107907da7cb47760212499a7921c",
+  "message": {
+    "employee": "0xF7Bd8400eb317dAc48cB72c350ED18e2F4826272",
+    "period": "202505",
+    "usdAmount": "1100"
+  }
+}
